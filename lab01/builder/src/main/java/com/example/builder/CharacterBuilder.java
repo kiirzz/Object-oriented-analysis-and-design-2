@@ -4,8 +4,8 @@ import com.example.builder.enums.WeaponType;
 
 public abstract class CharacterBuilder {
     protected String name;
-    protected String health;
-    protected String mana;
+    protected Integer health;
+    protected Integer mana;
     protected WeaponType weapon;
 
     public CharacterBuilder setName(String name) {
@@ -13,12 +13,12 @@ public abstract class CharacterBuilder {
         return this;
     }
 
-    public CharacterBuilder setHealth(String health) {
+    public CharacterBuilder setHealth(Integer health) {
         this.health = health;
         return this;
     }
 
-    public CharacterBuilder setMana(String mana) {
+    public CharacterBuilder setMana(Integer mana) {
         this.mana = mana;
         return this;
     }

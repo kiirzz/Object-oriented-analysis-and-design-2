@@ -21,8 +21,8 @@ export type WeaponTypeEnumType =
 export type CharacterType = {
   type: CharacterTypeEnumType;
   name: string;
-  health: string;
-  mana: string;
+  health: number;
+  mana: number;
   weapon?: WeaponTypeEnumType | null;
 };
 

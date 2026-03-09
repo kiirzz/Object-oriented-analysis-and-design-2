@@ -7,8 +7,8 @@ export const CharacterContext = () => {
   const [character, setCharacter] = useState<CharacterType>({
     type: "KNIGHT",
     name: "",
-    health: "0",
-    mana: "0",
+    health: 0,
+    mana: 0,
     weapon: null,
   });
 
@@ -48,7 +48,7 @@ export const CharacterContext = () => {
 
     setCharacter((prev) => ({
       ...prev,
-      [id]: String(value),
+      [id]: id === "name" ? value : Number(value),
     }));
   };
 

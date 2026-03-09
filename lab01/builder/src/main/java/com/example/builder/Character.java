@@ -9,11 +9,11 @@ import lombok.Getter;
 public class Character {
     private CharacterType type;
     private String name;
-    private String health;
-    private String mana;
+    private Integer health;
+    private Integer mana;
     private WeaponType weapon;
 
-    public Character(CharacterType type, String name, String health, String mana, WeaponType weapon) {
+    public Character(CharacterType type, String name, Integer health, Integer mana, WeaponType weapon) {
         this.type = type;
         this.name = name;
         this.health = health;

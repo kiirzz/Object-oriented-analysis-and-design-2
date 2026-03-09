@@ -15,8 +15,8 @@ public class CharacterBuildRequest {
     private CharacterType type;
 
     private String name;
-    private String health;
-    private String mana;
+    private Integer health;
+    private Integer mana;
 
     @JsonFormat(shape = JsonFormat.Shape.STRING)
     private WeaponType weapon;
