@@ -6,12 +6,12 @@ import com.example.builder.enums.WeaponType;
 public class ArcherBuilder extends CharacterBuilder {
 
     @Override
-    public Character build() {
-        return new Character(CharacterType.ARCHER, name, health, mana, null);
+    public CharacterBuilder setWeapon(WeaponType weapon) {
+        return this;
     }
 
     @Override
-    public CharacterBuilder setWeapon(WeaponType weapon) {
-        return this;
+    public Character build() {
+        return new Character(CharacterType.ARCHER, name, health, mana, null);
     }
 }
