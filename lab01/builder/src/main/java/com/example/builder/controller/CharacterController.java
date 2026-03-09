@@ -18,7 +18,7 @@ import com.example.builder.enums.CharacterType;
 
 @RestController
 @RequestMapping("/character")
-public class ColorController {
+public class CharacterController {
 
     @PostMapping("/with-builder")
     public Map<String, Object> createCharacterWithBuilder(@RequestBody CharacterBuildRequest request) {
