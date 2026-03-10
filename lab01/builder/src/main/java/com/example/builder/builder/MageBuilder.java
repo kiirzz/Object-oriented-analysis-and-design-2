@@ -1,10 +1,10 @@
-package com.example.builder;
+package com.example.builder.builder;
 
 import com.example.builder.enums.CharacterType;
 import com.example.builder.enums.WeaponType;
+import com.example.builder.model.Character;
 
-public class KnightBuilder implements CharacterBuilder {
-
+public class MageBuilder implements CharacterBuilder {
     private String name;
     private Integer health;
     private Integer mana;
@@ -45,7 +45,6 @@ public class KnightBuilder implements CharacterBuilder {
 
     @Override
     public Character build() {
-        return new Character(CharacterType.KNIGHT, name, health, mana, weapon);
+        return new Character(CharacterType.MAGE, name, health, mana, weapon);
     }
-    
 }

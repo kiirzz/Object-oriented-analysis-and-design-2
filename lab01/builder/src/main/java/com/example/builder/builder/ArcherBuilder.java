@@ -1,20 +1,20 @@
-package com.example.builder;
+package com.example.builder.builder;
 
 import com.example.builder.enums.CharacterType;
 import com.example.builder.enums.WeaponType;
+import com.example.builder.model.Character;
 
-public class MageBuilder implements CharacterBuilder {
+public class ArcherBuilder implements CharacterBuilder {
+
     private String name;
     private Integer health;
     private Integer mana;
-    private WeaponType weapon;
 
     @Override
     public CharacterBuilder reset() {
         name = null;
         health = null;
         mana = null;
-        weapon = null;
         return this;
     }
 
@@ -38,12 +38,11 @@ public class MageBuilder implements CharacterBuilder {
 
     @Override
     public CharacterBuilder setWeapon(WeaponType weapon) {
-        this.weapon = weapon;
         return this;
     }
 
     @Override
     public Character build() {
-        return new Character(CharacterType.MAGE, name, health, mana, weapon);
+        return new Character(CharacterType.ARCHER, name, health, mana, null);
     }
 }

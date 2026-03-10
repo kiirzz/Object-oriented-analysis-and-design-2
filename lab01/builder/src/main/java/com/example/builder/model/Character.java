@@ -1,4 +1,4 @@
-package com.example.builder;
+package com.example.builder.model;
 
 import com.example.builder.enums.CharacterType;
 import com.example.builder.enums.WeaponType;

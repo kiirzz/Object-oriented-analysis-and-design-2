@@ -1,6 +1,7 @@
-package com.example.builder;
+package com.example.builder.builder;
 
 import com.example.builder.enums.WeaponType;
+import com.example.builder.model.Character;
 
 public interface CharacterBuilder {
 
