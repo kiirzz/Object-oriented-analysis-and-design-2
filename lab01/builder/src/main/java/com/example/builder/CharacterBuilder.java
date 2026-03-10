@@ -2,31 +2,17 @@ package com.example.builder;
 
 import com.example.builder.enums.WeaponType;
 
-public abstract class CharacterBuilder {
-    protected String name;
-    protected Integer health;
-    protected Integer mana;
-    protected WeaponType weapon;
+public interface CharacterBuilder {
 
-    public CharacterBuilder setName(String name) {
-        this.name = name;
-        return this;
-    }
+    CharacterBuilder reset();
 
-    public CharacterBuilder setHealth(Integer health) {
-        this.health = health;
-        return this;
-    }
+    CharacterBuilder setName(String name);
 
-    public CharacterBuilder setMana(Integer mana) {
-        this.mana = mana;
-        return this;
-    }
+    CharacterBuilder setHealth(Integer health);
 
-    public CharacterBuilder setWeapon(WeaponType weapon) {
-        this.weapon = weapon;
-        return this;
-    }
+    CharacterBuilder setMana(Integer mana);
 
-    public abstract Character build();
+    CharacterBuilder setWeapon(WeaponType weapon);
+
+    Character build();
 }
