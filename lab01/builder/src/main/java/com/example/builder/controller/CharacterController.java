@@ -24,7 +24,9 @@ public class CharacterController {
         
         CharacterBuilder builder = request.getType().createBuilder();
 
-        Character character = director.construct(builder, request);
+        director.setBuilder(builder);
+
+        Character character = director.make(request);
 
         return Map.of("response", character);
     }
