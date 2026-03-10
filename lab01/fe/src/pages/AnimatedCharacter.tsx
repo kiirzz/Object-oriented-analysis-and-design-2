@@ -15,7 +15,8 @@ export const AnimatedCharacter = (props: Props) => {
   const weaponSpriteRef = useRef<any>(null);
 
   // Local state để tránh re-render Stage khi props thay đổi
-  const [currentTexture, setCurrentTexture] = useState<Texture[] | null>(
+  // Có thể reset animation khi textures thay đổi
+  const [currentTexture] = useState<Texture[] | null>(
     props.textures,
   );
   const [currentWeaponTexture, setCurrentWeaponTexture] =
