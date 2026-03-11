@@ -7,9 +7,8 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
-import com.example.builder.builder.CharacterBuilder;
+import com.example.builder.client.CharacterBuildClient;
 import com.example.builder.dto.CharacterBuildRequest;
-import com.example.builder.director.CharacterDirector;
 import com.example.builder.enums.CharacterType;
 import com.example.builder.model.Character;
 
@@ -17,16 +16,12 @@ import com.example.builder.model.Character;
 @RequestMapping("/character")
 public class CharacterController {
 
-    private final CharacterDirector director = new CharacterDirector();
+    private final CharacterBuildClient characterBuildClient = new CharacterBuildClient();
 
     @PostMapping("/with-builder")
     public Map<String, Object> createCharacterWithBuilder(@RequestBody CharacterBuildRequest request) {
-        
-        CharacterBuilder builder = request.getType().createBuilder();
 
-        director.setBuilder(builder);
-
-        Character character = director.make(request);
+        Character character = characterBuildClient.buildCharacter(request);
 
         return Map.of("response", character);
     }
