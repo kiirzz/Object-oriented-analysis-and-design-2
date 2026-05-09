@@ -1,0 +1,12 @@
+{
+  "Version": 1,
+  "Hash": "DgiZDWJdfq0PYfhaxWWI0WyCNJB9YxYq99u2WQCBZPc=",
+  "Source": "builder1",
+  "BasePath": "_content/builder1",
+  "Mode": "Default",
+  "ManifestType": "Build",
+  "ReferencedProjectsConfiguration": [],
+  "DiscoveryPatterns": [],
+  "Assets": [],
+  "Endpoints": []
+}
